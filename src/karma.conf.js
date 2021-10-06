@@ -1,6 +1,16 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
+var ReportportalAgent = require('agent-js-jasmine');
+
+var agent = new ReportportalAgent({
+  // client settings
+  token: "a9d10b05-f6ce-43b5-9323-1c2557dfae40",
+  endpoint: "https://rp.epam.com",
+  launch: "pavel_menshakou_TEST_EXAMPLE",
+  project: "pavel_menshakou_personal"
+});
+
 module.exports = function (config) {
   config.set({
     basePath: '',

@@ -23,14 +23,12 @@ export class FormComponent implements OnInit {
     this.buildForm();
     this.userNameControl.setValue('John');
     this.emailControl.setValue('test@email.com');
-    this.lastnameControl.setValue('NN');
 
 
     this.userFormGroup.valueChanges.subscribe((data) => {
-      if (data.langth) {
-        asfasd
-      }
-    })
+      this.fullData = `${data.userName} ${data.email}`;
+      console.log(this.userFormGroup);
+    });
   }
 
   public buildForm(): void {
@@ -38,7 +36,7 @@ export class FormComponent implements OnInit {
       userName: this.userNameControl,
       email: this.emailControl,
       lastname: this.sendEmailsControl
-    })
+    });
   }
 
   public submitForm(): void {
