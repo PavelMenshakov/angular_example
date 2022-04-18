@@ -25,7 +25,8 @@ export class AccountsService {
 public updatedStatusValue: EventEmitter<string> = new EventEmitter();
 
 reportStatus(status: string){
-    this.updatedStatusValue.emit(status)
+    this.updatedStatusValue.emit(status);
+    console.log(123123123);
 }
 
 addAccount(name: string, status: string) {
